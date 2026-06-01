@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App — Phase 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="WeatherApp.css">
+</head>
+<body>
+
+    <div class="weather-app">
+        <h1><i class="fa-solid fa-cloud-sun-rain"></i> Weather App</h1>
+        
+        <form id="search-form">
+            <label for="search-input" class="visually-hidden">Search city:</label>
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="e.g., Sofia, London, Paris..." 
+                required
+            >
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </form>
+
+        <div id="weather-info" class="weather-info">
+            <h2 id="city-name">City Name</h2>
+            
+            <div class="weather-main">
+                <i id="weather-icon" class="fa-solid fa-cloud sun-icon"></i>
+                <p id="temperature">--°C</p>
+            </div>
+            
+            <div class="weather-details">
+                <p id="weather-condition"><i class="fa-solid fa-smog"></i> Condition: --</p>
+                <p id="wind-speed"><i class="fa-solid fa-wind"></i> Wind Speed: -- m/s</p>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <i class="fa-solid fa-circle-notch fa-spin"></i> Loading weather data...
+        </div>
+
+        <div id="error" class="error">
+            <i class="fa-solid fa-circle-exclamation"></i> <span id="error-message">Error!</span>
+        </div>
+    </div>
+
+    <script src="WeatherApp.js"></script>
+</body>
+</html>
